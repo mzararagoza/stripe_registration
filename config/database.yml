@@ -1,0 +1,16 @@
+development: &development
+  adapter: postgresql
+  database: stripe_registration_development
+  username: moiseszaragoza
+  host:     localhost
+  port:     5432
+  schema_search_path: public
+  min_messages: warning
+
+test:
+  <<: *development
+  database: stripe_registration_test
+
+cucumber:
+  database: stripe_registration_cucumber
+
